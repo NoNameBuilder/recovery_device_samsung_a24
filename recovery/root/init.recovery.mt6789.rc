@@ -124,3 +124,12 @@ on fs && property:ro.debuggable=0
 
 on boot
     exec u:r:update_engine:s0 root root -- /system/bin/mtk_plpath_utils
+    insmod /vendor_dlkm/lib/modules/goodix_ts_berlin.ko
+    insmod /vendor/lib/modules/goodix_ts_berlin.ko
+    insmod /lib/modules/goodix_ts_berlin.ko
+    modprobe -d /vendor_dlkm/lib/modules/ goodix_ts_berlin
+    modprobe -d -d /vendor_dlkm/lib/modules/ goodix_ts_berlin
+    modprobe -d /vendor/lib/modules/goodix_ts_berlin.ko
+    modprobe -d -d /vendor/lib/modules/goodix_ts_berlin.ko
+    modprobe -d /lib/modules/goodix_ts_berlin.ko
+    modprobe -d -d /lib/modules/goodix_ts_berlin.ko
