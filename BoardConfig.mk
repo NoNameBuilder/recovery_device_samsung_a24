@@ -1,10 +1,3 @@
-#
-# Copyright (C) 2024 The Android Open Source Project
-# Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
 DEVICE_PATH := device/samsung/a24
 
 # For building with minimal manifest
@@ -106,7 +99,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 #TW_SCREEN_BLANK_ON_BOOT := true
 #TW_NO_SCREEN_TIMEOUT := true
-TW_DEVICE_VERSION := smiley_9000
+TW_DEVICE_VERSION=$(shell date '+%Y%m%d')
 TW_NO_LEGACY_PROPS := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
@@ -115,15 +108,14 @@ TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_PYTHON := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_EXCLUDE_APEX := true
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
 TW_MTP_DEVICE := "Galaxy A24"
-TWRP_EVENT_LOGGING := true
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
-TARGET_USES_LOGD := true
 TW_LOAD_VENDOR_MODULES := "goodix_ts_berlin.ko"
 TW_LOAD_VENDOR_BOOT_MODULES := true
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
-TW_FRAMERATE := 120
+TW_FRAMERATE := 60
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
+# TWRP Debug Flags
+TWRP_EVENT_LOGGING := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
