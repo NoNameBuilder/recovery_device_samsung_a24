@@ -108,3 +108,14 @@ on init
     write /sys/class/sec/tsp2/cmd check_connection
     write /sys/class/sec/tsp2/enabled 1,0
     write /sys/class/sec/tsp2/enabled 2,1
+
+    # Load Modules for Touchscreen
+    insmod /vendor_dlkm/lib/modules/goodix_ts_berlin.ko
+    insmod /vendor/lib/modules/goodix_ts_berlin.ko
+    insmod /lib/modules/goodix_ts_berlin.ko
+    modprobe -d /vendor_dlkm/lib/modules/ goodix_ts_berlin
+    modprobe -d -d /vendor_dlkm/lib/modules/ goodix_ts_berlin
+    modprobe -d /vendor/lib/modules/goodix_ts_berlin.ko
+    modprobe -d -d /vendor/lib/modules/goodix_ts_berlin.ko
+    modprobe -d /lib/modules/goodix_ts_berlin.ko
+    modprobe -d -d /lib/modules/goodix_ts_berlin.ko
