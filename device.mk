@@ -21,7 +21,7 @@ PRODUCT_HOST_PACKAGES_ENG += \
     dump.erofs \
     fsck.erofs
 
-PRODUCT_PACKAGES += shrink
+PRODUCT_PACKAGES += shrink bxhsed
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
