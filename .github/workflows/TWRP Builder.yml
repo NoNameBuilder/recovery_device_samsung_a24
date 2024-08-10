@@ -51,7 +51,7 @@ jobs:
       
     - name: Clone device tree
       run: |
-        git clone https://github.com/NoNameBuilder/WorkingDTFORA24.git -b ${{ env.BRANCH_NAME }} ./device/samsung/a24
+        git clone https://github.com/NoNameBuilder/recovery_device_samsung_a24.git -b ${{ env.BRANCH_NAME }} ./device/samsung/a24
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Set Swap Space
