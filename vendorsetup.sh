@@ -17,7 +17,7 @@
 # 	
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="platina"
+FDEVICE="a24"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep $FDEVICE)
@@ -49,7 +49,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 	#export OF_FORCE_MAGISKBOOT_BOOT_PATCH_MIUI=1; # if you disable this, then enable the next line
-	export OF_NO_MIUI_PATCH_WARNING=1
+	#export OF_NO_MIUI_PATCH_WARNING=1
 
 	export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
@@ -67,13 +67,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 
-        # -- add settings for R11 --
-        export FOX_R11=1
-        export FOX_ADVANCED_SECURITY=1
-        export OF_USE_TWRP_SAR_DETECT=1
-        export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
-        export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
-        # -- end R11 settings --
+ 
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
