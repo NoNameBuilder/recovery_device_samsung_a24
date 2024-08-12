@@ -66,8 +66,6 @@ jobs:
         
     - name: Building recovery
       run: |
-        export USE_CCACHE=1
-        export CCACHE_EXEC=/usr/bin/ccache
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         lunch twrp_a24-eng && make clean && make recoveryimage -j$(nproc --all)
