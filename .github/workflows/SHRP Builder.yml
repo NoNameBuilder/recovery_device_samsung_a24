@@ -41,7 +41,7 @@ jobs:
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
         git config --global user.name "NoNameBuilder"
         git config --global user.email "163744362+NoNameBuilder@users.noreply.github.com"
-        repo init --depth=1 --no-repo-verify -u https://github.com/smiley9000/platform_manifest_twrp_aosp.git -b twrp-12.1 -g default,-mips,-darwin,-notdefault
+        repo init -u https://github.com/SHRP/manifest.git -b shrp-12.1
       id: pwd
           
     - name: Repo Sync
