@@ -2,16 +2,13 @@ LOCAL_PATH := device/samsung/a24
 
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
-# fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
-
 # Health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service \
     libhealthd.$(PRODUCT_PLATFORM)
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
 
 # EROFS Tools
 PRODUCT_HOST_PACKAGES_ENG += \
