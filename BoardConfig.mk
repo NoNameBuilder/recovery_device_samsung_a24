@@ -164,4 +164,4 @@ TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS := 50
 TW_CUSTOM_CLOCK_POS := 300
 TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/battery/capacity
-TW_CUSTOM_CPU_TEMP_PATH :=  /sys/class/thermal/thermal_zone12/temp
+TW_CUSTOM_CPU_TEMP_PATH :=  /sys/devices/virtual/thermal/thermal_zone12/temp
