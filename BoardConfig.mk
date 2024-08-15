@@ -26,7 +26,6 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := a24
-TARGET_NO_BOOTLOADER := true
 
 # MTK Chipsets only
 BOARD_USES_MTK_HARDWARE := true
@@ -145,6 +144,7 @@ TARGET_USES_LOGD := true
 TW_USE_SAMSUNG_HAPTICS := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_REBOOT_BOOTLOADER := true
+TARGET_NO_BOOTLOADER := true
 
 # Props and tools
 TW_NO_LEGACY_PROPS := true
@@ -163,7 +163,7 @@ TW_EXCLUDE_APEX := false
 TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS := 50
 TW_CUSTOM_CLOCK_POS := 300
-TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/battery/capacity
-TW_CUSTOM_CPU_TEMP_PATH :=  /sys/devices/virtual/thermal/thermal_zone12/temp
+TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery/capacity"
+TW_CUSTOM_CPU_TEMP_PATH :=  "/sys/devices/virtual/thermal/thermal_zone12/temp"
 TW_Y_OFFSET := 80
 TW_H_OFFSET := -80
