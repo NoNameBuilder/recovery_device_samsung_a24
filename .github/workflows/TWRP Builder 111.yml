@@ -61,7 +61,7 @@ jobs:
       
     - name: Clone device tree
       run: |
-        git clone https://github.com/diamdosnf/a24testing -b main ./device/samsung/a24
+        git clone https://github.com/NoNameBuilder/a24testing/ -b main ./device/samsung/a24
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
         
     - name: Building recovery
