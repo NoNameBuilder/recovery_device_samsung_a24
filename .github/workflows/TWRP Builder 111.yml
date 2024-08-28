@@ -61,14 +61,14 @@ jobs:
       
     - name: Clone device tree
       run: |
-        git clone https://github.com/diamdosnf/aaaaaaaa -b ${{ env.BRANCH_NAME }} ./device/samsung/a24
+        git clone https://github.com/diamdosnf/a24testing -b main ./device/samsung/a24
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
         
     - name: Building recovery
       run: |
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
-        lunch twrp_a24-eng && make clean && make recoveryimage -j$(nproc --all)
+        lunch flop_a24-eng && make clean && make recoveryimage -j$(nproc --all)
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Upload Artifact
